@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop</title>
+</head>
+<body>
+    <div id="main">
+    <div id="header">
+      <div id="logo">
+        <div id="logo_text">
+          <h1>Shop Toys ATN</a></h1>
+         <img src="https://seeklogo.com/images/A/atn-corp-logo-ADD20F82AB-seeklogo.com.png" width="10%" height="200px"><img src="https://images.creativemarket.com/0.1.0/ps/2465220/1160/772/m1/fpnw/wm0/template-for-preview-km-1-.jpg?1490688225&s=9d938d8f0da5f831702888ade8cacef9" width="90%" height="200px">
+       
+      </div>
+      </div>
+    </div>
+    </div>
+<center>
+<form class="frm123" action="" method="POST">
+	<fieldset>
+		<legend> Search product </legend>
+		<form action="/search" method="post">
+        <input type="text" name="txtSearch">
+        <input type="submit" value="Search">
+    </form>
+	</fieldset>
+</form>
+<br><br>
+</center>  
+    <div><a href="../insert_product">Insert</a></div>
+    <table border="1">
+   <tr>
+      <th>No</th>
+      <th>Name toy</th>
+      <th>Quantity</th>
+      <th>Price</th>
+      <th>Image</th>
+      <th>Edit</th>
+   </tr>
+        {{#each data}}
+        <tr>
+          
+           <th>{{name}}</th> <th>{{quantity}}</th> <th> {{price}}</th>
+              <th> <img src="{{picture}}" width="150" height="100"/></th>
+              <th><a href="/delete?id={{_id}}">Delete</a><br><a href="/edit?id={{_id}}">Update</a></th> 
+        {{/each}} 
+    </tr> 
+    </table>
+</div>
+
+    <div id="footer">
+      Copyright by FPT Greenwich - 2019
+    
